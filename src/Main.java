@@ -1,5 +1,8 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class Box {
-    public static <T> void displayArray(T[] array) {
+    public static <T> void displayArray(List<T> array) {
         for(T element: array) {
             System.out.println(element);
         }
@@ -8,8 +11,14 @@ class Box {
 
 public class Main {
     public static void main(String[] args) {
-        Integer[] numbers = { 11, 22, 33, 44, 55 };
-        String[] words = {"Spring", "Summer", "Fall"};
+        List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7);
+        //numbers.add(8); numbers.remove(5);
+
+        List<String> words = new ArrayList<>();
+        words.add("Red");
+        words.add("Orange");
+        words.add("Yellow");
+        words.add("Green");
 
         Box.displayArray(numbers);
         Box.displayArray(words);
