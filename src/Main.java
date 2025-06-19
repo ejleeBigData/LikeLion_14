@@ -1,4 +1,7 @@
+import java.util.Arrays;
 import java.util.List;
+
+
 
 public class Main {
     public static void printElements(List<?> list) {
@@ -8,7 +11,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 8, 4);
+        List<String> colors = Arrays.asList("red","orange", "yellow");
 
-
+        printElements(numbers);
+        printElements(colors);
     }
 }
