@@ -27,6 +27,6 @@ public class Main {
         stringBox.setContent("오우~~~");
         System.out.println(stringBox.getContent());
         stringBox.printContent("뭔가요?");
-
+        stringBox.printContent(11111); // <E> 라서 가능
     }
 }
