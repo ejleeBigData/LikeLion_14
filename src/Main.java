@@ -1,32 +1,18 @@
-class Box<T> {
-    private T content ;
-
-    public Box(T content) {
-        this.content = content;
-    }
-
-    public T getContent() {
-        return content;
-    }
-
-    public void setContent(T content) {
-        this.content = content;
-    }
-
-    public <E> void printContent(E extraInfo) {
-        System.out.println("Content : " + content + ", Extra : " + extraInfo);
+class Box {
+    public static <T> void displayArray(T[] array) {
+        for(T element: array) {
+            System.out.println(element);
+        }
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Box<String> stringBox = new Box<>("멋진 박스!!!");
+        Integer[] numbers = { 11, 22, 33, 44, 55 };
+        String[] words = {"Spring", "Summer", "Fall"};
 
-        System.out.println(stringBox.getContent());
+        Box.displayArray(numbers);
+        Box.displayArray(words);
 
-        stringBox.setContent("오우~~~");
-        System.out.println(stringBox.getContent());
-        stringBox.printContent("뭔가요?");
-        stringBox.printContent(11111); // <E> 라서 가능
     }
 }
